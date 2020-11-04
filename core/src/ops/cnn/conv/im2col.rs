@@ -165,7 +165,7 @@ impl Patcher {
         &self,
         im2col: &'i Im2Col,
         input: &'i TensorView,
-        pack: &'p mut TensorViewMut,
+        pack: &'p mut TensorView,
         g: usize,
     ) -> TractResult<()> {
         match self {
@@ -180,7 +180,7 @@ impl Patcher {
     fn generic<'i, 'p, T: Copy + Datum>(
         im2col: &'i Im2Col,
         input: &'i TensorView,
-        pack: &'p mut TensorViewMut,
+        pack: &'p mut TensorView,
         g: usize,
     ) -> TractResult<()> {
         unsafe {
@@ -212,7 +212,7 @@ impl Patcher {
     fn valid_1d<'i, 'p, T: Copy + Datum>(
         im2col: &'i Im2Col,
         input: &'i TensorView,
-        pack: &'p mut TensorViewMut,
+        pack: &'p mut TensorView,
         g: usize,
     ) -> TractResult<()> {
         unsafe {
@@ -239,7 +239,7 @@ impl Patcher {
     fn padded_2d<'i, 'p, T: Copy + Datum>(
         im2col: &'i Im2Col,
         input: &'i TensorView,
-        pack: &'p mut TensorViewMut,
+        pack: &'p mut TensorView,
         g: usize,
     ) -> TractResult<()> {
         unsafe {
@@ -290,7 +290,7 @@ impl Patcher {
     fn valid_2d<'i, 'p, T: Copy + Datum>(
         im2col: &'i Im2Col,
         input: &'i TensorView,
-        pack: &'p mut TensorViewMut,
+        pack: &'p mut TensorView,
         g: usize,
     ) -> TractResult<()> {
         unsafe {
